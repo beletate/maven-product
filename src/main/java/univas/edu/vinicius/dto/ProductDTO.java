@@ -1,6 +1,7 @@
 package univas.edu.vinicius.dto;
 
 import univas.edu.vinicius.model.Product;
+import univas.edu.vinicius.model.support.ProductCategory;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -25,7 +26,7 @@ public class ProductDTO {
     @NotEmpty(message = "O fornecedor não pode ser vazio.")
     private String description;
 
-    private Integer category;
+    private ProductCategory category;
 
     public ProductDTO() {}
 
@@ -61,11 +62,11 @@ public class ProductDTO {
 		this.description = description;
 	}
 
-	public Integer getCategory() {
+	public ProductCategory getCategory() {
 		return category;
 	}
 
-	public void setCategory(Integer category) {
+	public void setCategory(ProductCategory category) {
 		this.category = category;
 	}
 

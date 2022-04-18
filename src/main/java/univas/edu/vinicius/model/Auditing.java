@@ -1,5 +1,7 @@
 package univas.edu.vinicius.model;
 
+import java.util.Date;
+
 import javax.persistence.*;
 
 @Entity

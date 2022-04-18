@@ -56,7 +56,7 @@ public class ProductService {
             throw new InvalidDataException("Product não pode ser null.");
         }
         Product product = getProductById(code);
-        updateData(dto, product);
+        updateProduct(dto, product);
         productDAO.save(product);
     }
 
@@ -69,4 +69,5 @@ public class ProductService {
     public void deleteProduct(Long code) {
         Product product = getProductById(code);
         productDAO.delete(product);
+    }
 }

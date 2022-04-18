@@ -12,8 +12,8 @@ import univas.edu.vinicius.model.Product;
 import univas.edu.vinicius.service.AuditingService;
 import univas.edu.vinicius.service.ProductService;
 
-@RestControlleroller
-@RequestMappingstMapping("/products")
+@RestController
+@RequestMapping("/products")
 public class ProductController {
 	
 	@Autowired

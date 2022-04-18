@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import univas.edu.vinicius.model.support.ProductCategory;
+
 @Entity
 public class Product {
 	@Id
@@ -13,20 +15,19 @@ public class Product {
     private String name;
     private float price;
     private String description;
-    private int category;
-
+    private ProductCategory category;
+    
     public Product() {}
 
-    public Product(int code, String name, float price, String description, Integer category) {
+    public Product(String name, String description, float price, ProductCategory category) {
         super();
-        this.code = code;
         this.name = name;
         this.price = price;
         this.description = description;
         this.category = category;
     }
 
-    public Long getCode() {
+	public Long getCode() {
         return code;
     }
 
@@ -58,11 +59,11 @@ public class Product {
 		this.description = description;
 	}
 
-	public int getCategory() {
+	public ProductCategory getCategory() {
 		return category;
 	}
 
-	public void setCategory(int category) {
+	public void setCategory(ProductCategory category) {
 		this.category = category;
 	}
     
